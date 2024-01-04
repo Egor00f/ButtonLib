@@ -1,0 +1,19 @@
+#######################################
+# Syntax Coloring Map For ButtonLib
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Button	KEYWORD1 
+ButtonMatrix	KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+SetPin	KEYWORD2
+click	KEYWORD2
+
+check	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
