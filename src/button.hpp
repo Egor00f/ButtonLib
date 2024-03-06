@@ -1,6 +1,7 @@
 #ifndef BUTTON_HPP
 #define BUTTON_HPP 
 
+//"Поддержка" для raspberry pi pico sdk
 #ifdef _PICO_H
 
 #include "pico/stdlib.h"
@@ -12,55 +13,73 @@
 #endif
 
 
-/*
-	Класс для удобной работы с кнопками
-*/
-class Button
+
+namespace ButtonLib
 {
-private:
-#ifdef _PICO_H
-	unsigned _pin;	//пин кнопки
-#else
-	uint8_t _pin;
-#endif
-
-public:
-#ifdef _PICO_H
-	//Конструктор
-	button(unsigned PIN)
-#else
-	// Конструктор
-	button(uint8_t PIN)
-#endif
+	/// @brief Класс для удобной работы с кнопками
+	/// @class Кнопка
+	class Button
 	{
-		_pin = PIN;
-#ifdef _PICO_H
-		gpio_init(_pin);
-		gpio_set_dir(_pin, GPIO_IN);
-#else
-		pinMode(_pin, INPUT);
-#endif
+	private:
+		#ifdef _PICO_H
+		unsigned _pin; // пин кнопки
+		#else
+		uint8_t _pin;
+		#endif
+
+	public:
+		#ifdef _PICO_H
+		// Конструктор
+		Button(unsigned PIN);
+		#else
+		// Конструктор
+		Button(uint8_t PIN);
+		#endif
 		
+
+		void SetPin(uint8_t pin)
+		{
+			_pin = pin;
+			#ifdef _PICO_H
+			gpio_set_dir(_pin);
+			#else
+			pinMode(_pin, INPUT);
+			#endif
+		}
+
+		/// @brief Получить пин
+		uint8_t GetPin();
+
+		// проверяет нажата ли кнопка
+		bool click();
+	};
+
+	uint8_t Button::GetPin()
+	{
+		return _pin;
 	}
 
-	void SetPin(unit8_t pin)
+	bool Button::click()
 	{
-		_pin = pin;
-		pinMode(_pin, INPUT);
-	}
-
-	//проверяет нажата ли кнопка 
-	bool click()
-	{
-#ifdef _PICO_H
+		#ifdef _PICO_H
 		bool clk = gpio_get(_pin);
-#else
+		#else
 		bool clk = digitalRead(_pin);
-#endif
-		
+		#endif
 		return clk;
 	}
-};
+
+	Button::Button(uint8_t PIN)
+	{
+		_pin = PIN;
+		#ifdef _PICO_H
+		gpio_init(_pin);
+		gpio_set_dir(_pin, GPIO_IN);
+		#else
+		pinMode(_pin, INPUT);
+		#endif
+	}
+}
 
 
 

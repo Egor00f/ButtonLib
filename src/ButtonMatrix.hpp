@@ -1,104 +1,107 @@
 #ifndef __BUTTON_MATRIX_HPP__
 #define __BUTTON_MATRIX_HPP__
 
+#include <Arduino.h>
 
 /// @brief Класс для работы с матрицой кнопок
+/// @brief Матриуа кнопок
 class ButtonMatrix
 {
 private:
-	/// @brief ссылка на массив пинов использемых как входы
-	uint8_t *_inputPins;
-	/// @brief ссылка на массив пинов использемых как выходы
-	uint8_t *_outputPins;
+	/// @brief указатель на массив пинов использемых как входы
+	uint8_t *_xPins;
+
+	/// @brief указатель на массив пинов использемых как выходы
+	uint8_t *_yPins;
+	
+	/// @brief Размеры по осям x и y
+	uint8_t _x, _y;
+
 public:
-	/// @brief
-	/// @param inputPins массив пинов
-	/// @param outputPins массив пинов
-	ButtonMatrix(uint8_t *inputPins, uint8_t *outputPins);
+
+	/// @brief Конструктор
+	/// @tparam X размер массива @link _xPins
+	/// @tparam Y размер массива @link _yPins
+	/// @param xPins массив пинов
+	/// @param yPins массив пинов
+	template <uint8_t X, uint8_t Y>
+	ButtonMatrix(uint8_t (&xPins)[X], uint8_t (&yPins)[Y]);
+
+	/// @brief Деструктор
 	~ButtonMatrix();
 
-	unsigned GetSizeX();
-	unsigned GetSizeY();
+	/// @brief Получить размер матрицы по x
+	/// @return 
+	uint8_t GetSizeX();
+
+	/// @brief Получить размер матрицы по y
+	/// @return 
+	uint8_t GetSizeY();
 
 	/// @brief проверить какая кнопка в марице нажата
-	/// @return порядковый номер кнопки(от 1 до sizeof(unsigned)), 0 если ниодна кнопка не нажата
-	unsigned check();
+	/// @return порядковый номер кнопки, -1 если ниодна кнопка не нажата
+	int8_t check();
 };
 
-ButtonMatrix::ButtonMatrix(uint8_t* inputPins, uint8_t* outputPins)
-{
-	unsigned i = 0;
-	while (inputPins[i] != 0)
-	{
-		_inputPins[i] = inputPins[i];
-		i++;
-	}
-	_inputPins[i] = 0;
-
-	i = 0;
-	while (outputPins[i] != 0)
-	{
-		_oututPins[i] = outputPins[i];
-		i++;
-	}
-	_outputPins[i] = 0;
-
-
-	i = 0;
-	while (inputPins[i] != 0)
-	{
-		pinMode(_inputPins[i], INPUT);
-		i++;
-	}
-
-	i = 0;
-	while (outputPins[i] != 0)
-	{
-		pinMode(_outputPins[i], OUTPUT);
-		i++;
-	}
-}
 
 ButtonMatrix::~ButtonMatrix()
 {
-	
+	free(_xPins);
+	free(_yPins);
 }
 
-unsigned ButtonMatrix::GetSizeY()
+uint8_t ButtonMatrix::GetSizeY()
 {
-	unsigned i = 0;
-	while (_inputPins[i] != 0)
-	{
-		i++;
-	}
-	return i;
+	return _y;
 }
 
-unsigned ButtonMatrix::GetSizeX()
+uint8_t ButtonMatrix::GetSizeX()
 {
-	unsigned i = 0;
-	while (_outputPins[i] != 0)
-	{
-		i++;
-	}
-	return i;
+	return _x;
 }
 
-unsigned ButtonMatrix::check()
+int8_t ButtonMatrix::check()
 {
-	for(unsigned i = 0; i < GetSizeX(); i++)
+	for(uint8_t i = 0; i < _x; i++)
 	{
-		digitalWrite(_outputPins[i], HIGHT);
-		for(unsigned j = 0; j < GetSizeY(); j++)
+		digitalWrite(_xPins[i], HIGH);
+		for(uint8_t j = 0; j < _y; j++)
 		{
-			if(digitalRead(_inputPins[j]))
+			if(digitalRead(_yPins[j]))
 			{
-				return (GetSizeX() * j) + i + 1;
+				return (_x * i) + j;
 			}
 		}
-		digitalWrite(_outputPins[i], LOW);
+		digitalWrite(_xPins[i], LOW);
 	}
-	return 0;								//Если ниодна кнопка не была нажата
+	return -1;								//Если ниодна кнопка не была нажата
 }
 
 #endif
+
+template <uint8_t X, uint8_t Y>
+ButtonMatrix::ButtonMatrix(uint8_t (&xPins)[X], uint8_t (&yPins)[Y])
+{
+	_xPins = (uint8_t)malloc(x);
+	_yPins = (uint8_t)malloc(y);
+
+	for (uint8_t i = 0; i < X; i++)
+	{
+		_xPins[i] = xPins[i];
+	}
+
+	for (uint8_t i = 0; i < Y; i++)
+	{
+		_yPins[i] = yPins[i];
+	}
+
+	for (uint8_t i = 0; i < X; i++)
+	{
+		pinMode(_xPins[i], INPUT);
+	}
+
+	for (uint8_t i = 0; i < Y; i++)
+	{
+		pinMode(_yPins[i], OUTPUT);
+	}
+}

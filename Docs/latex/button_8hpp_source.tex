@@ -1,0 +1,89 @@
+\doxysection{button.\+hpp}
+\hypertarget{button_8hpp_source}{}\label{button_8hpp_source}\index{C:/Users/yyari/Documents/Arduino/buttonlib/src/button.hpp@{C:/Users/yyari/Documents/Arduino/buttonlib/src/button.hpp}}
+\mbox{\hyperlink{button_8hpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ BUTTON\_HPP}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ BUTTON\_HPP\ }}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00004}00004\ \textcolor{comment}{//"{}Поддержка"{}\ для\ raspberry\ pi\ pico\ sdk}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifdef\ \_PICO\_H}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}pico/stdlib.h"{}}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00017}\mbox{\hyperlink{namespace_button_lib}{00017}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_button_lib}{ButtonLib}}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00021}\mbox{\hyperlink{class_button_lib_1_1_button}{00021}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_lib_1_1_button}{Button}}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ \_PICO\_H}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \_pin;\ \textcolor{comment}{//\ пин\ кнопки}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ uint8\_t\ \_pin;}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ \_PICO\_H}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Конструктор}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_lib_1_1_button_a0aa0ce9d7b1ff1514b6a78f0842961cc}{Button}}(\textcolor{keywordtype}{unsigned}\ PIN);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Конструктор}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_lib_1_1_button_a0aa0ce9d7b1ff1514b6a78f0842961cc}{Button}}(uint8\_t\ PIN);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00037}00037\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00040}\mbox{\hyperlink{class_button_lib_1_1_button_a0b89099c346d04e00390bb22de7e3b63}{00040}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_lib_1_1_button_a0b89099c346d04e00390bb22de7e3b63}{SetPin}}(uint8\_t\ pin)}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \_pin\ =\ pin;}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#ifdef\ \_PICO\_H}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ gpio\_set\_dir(\_pin);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ pinMode(\_pin,\ INPUT);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_button_lib_1_1_button_a768206f4aaccc56867a14c84bc89f824}{GetPin}}();}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ проверяет\ нажата\ ли\ кнопка}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567bfa}{click}}();}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00055}00055\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00057}\mbox{\hyperlink{class_button_lib_1_1_button_a768206f4aaccc56867a14c84bc89f824}{00057}}\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_button_lib_1_1_button_a768206f4aaccc56867a14c84bc89f824}{Button::GetPin}}()}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_pin;}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00062}\mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567bfa}{00062}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567bfa}{Button::click}}()}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00064}00064\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ \_PICO\_H}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ clk\ =\ gpio\_get(\_pin);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ clk\ =\ digitalRead(\_pin);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00068}00068\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ clk;}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00072}\mbox{\hyperlink{class_button_lib_1_1_button_a0aa0ce9d7b1ff1514b6a78f0842961cc}{00072}}\ \ \ \ \ \mbox{\hyperlink{class_button_lib_1_1_button_a0aa0ce9d7b1ff1514b6a78f0842961cc}{Button::Button}}(uint8\_t\ PIN)}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00073}00073\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \_pin\ =\ PIN;}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#ifdef\ \_PICO\_H}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ gpio\_init(\_pin);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ gpio\_set\_dir(\_pin,\ GPIO\_IN);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00078}00078\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ pinMode(\_pin,\ INPUT);}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00080}00080\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{button_8hpp_source_l00086}00086\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
