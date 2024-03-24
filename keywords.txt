@@ -11,8 +11,10 @@ ButtonMatrix	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 SetPin	KEYWORD2
+GetPin	KEYWORD2
 click	KEYWORD2
-
+GetSizeX	KEYWORD2
+GetSizeY	KEYWORD2
 check	KEYWORD2
 #######################################
 # Constants (LITERAL1)

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ButtonLib: Класс ButtonMatrix</title>
+<title>ButtonLib: Класс ButtonLib::ButtonMatrix</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_button_matrix.html',''); initResizable(); });
+$(function(){initNavTree('class_button_lib_1_1_button_matrix.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,22 +93,21 @@ $(function(){initNavTree('class_button_matrix.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Открытые члены</a> &#124;
-<a href="class_button_matrix-members.html">Полный список членов класса</a>  </div>
-  <div class="headertitle"><div class="title">Класс ButtonMatrix</div></div>
+<a href="class_button_lib_1_1_button_matrix-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ButtonLib::ButtonMatrix</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Класс для работы с матрицой кнопок  
+<p>Класс для работы с матрицей кнопок  
  <a href="#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:acb37502dfd37b7b94dd14361957a12fe" id="r_acb37502dfd37b7b94dd14361957a12fe"><td class="memTemplParams" colspan="2">template&lt;uint8_t X, uint8_t Y&gt; </td></tr>
-<tr class="memitem:acb37502dfd37b7b94dd14361957a12fe"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acb37502dfd37b7b94dd14361957a12fe">ButtonMatrix</a> (uint8_t(&amp;xPins)[X], uint8_t(&amp;yPins)[Y])</td></tr>
-<tr class="memdesc:acb37502dfd37b7b94dd14361957a12fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор  <br /></td></tr>
-<tr class="separator:acb37502dfd37b7b94dd14361957a12fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5705160fbea8e896d192869040dc40a2" id="r_a5705160fbea8e896d192869040dc40a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5705160fbea8e896d192869040dc40a2">ButtonMatrix</a> (const uint8_t *xPins, const uint8_t *yPins, uint8_t X, uint8_t Y)</td></tr>
+<tr class="memdesc:a5705160fbea8e896d192869040dc40a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор  <br /></td></tr>
+<tr class="separator:a5705160fbea8e896d192869040dc40a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca01e3134c5df5523afe08c010d9337" id="r_a6ca01e3134c5df5523afe08c010d9337"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca01e3134c5df5523afe08c010d9337">~ButtonMatrix</a> ()</td></tr>
 <tr class="memdesc:a6ca01e3134c5df5523afe08c010d9337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор  <br /></td></tr>
 <tr class="separator:a6ca01e3134c5df5523afe08c010d9337"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,46 +117,56 @@ $(function(){initNavTree('class_button_matrix.html',''); initResizable(); });
 <tr class="memitem:accb10271596a79c4bc9ea5579873ac24" id="r_accb10271596a79c4bc9ea5579873ac24"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accb10271596a79c4bc9ea5579873ac24">GetSizeY</a> ()</td></tr>
 <tr class="memdesc:accb10271596a79c4bc9ea5579873ac24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить размер матрицы по y.  <br /></td></tr>
 <tr class="separator:accb10271596a79c4bc9ea5579873ac24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae78a224cf4898949fa70b62c0ddbf5" id="r_a8ae78a224cf4898949fa70b62c0ddbf5"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae78a224cf4898949fa70b62c0ddbf5">check</a> ()</td></tr>
-<tr class="memdesc:a8ae78a224cf4898949fa70b62c0ddbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">проверить какая кнопка в марице нажата  <br /></td></tr>
-<tr class="separator:a8ae78a224cf4898949fa70b62c0ddbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c131f0b9ae1c42a572f067cc7a3a6bc" id="r_a1c131f0b9ae1c42a572f067cc7a3a6bc"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c131f0b9ae1c42a572f067cc7a3a6bc">check</a> ()</td></tr>
+<tr class="memdesc:a1c131f0b9ae1c42a572f067cc7a3a6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">проверить какая кнопка в марице нажата  <br /></td></tr>
+<tr class="separator:a1c131f0b9ae1c42a572f067cc7a3a6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Класс для работы с матрицой кнопок </p>
-<p>Матриуа кнопок </p>
+<div class="textblock"><p>Класс для работы с матрицей кнопок </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00008">8</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00011">11</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="acb37502dfd37b7b94dd14361957a12fe" name="acb37502dfd37b7b94dd14361957a12fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb37502dfd37b7b94dd14361957a12fe">&#9670;&#160;</a></span>ButtonMatrix()</h2>
+<a id="a5705160fbea8e896d192869040dc40a2" name="a5705160fbea8e896d192869040dc40a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5705160fbea8e896d192869040dc40a2">&#9670;&#160;</a></span>ButtonMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;uint8_t X, uint8_t Y&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">ButtonMatrix::ButtonMatrix </td>
           <td>(</td>
-          <td class="paramtype">uint8_t(&amp;)</td>          <td class="paramname"><span class="paramname"><em>xPins</em>[X], </span></td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>xPins</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t(&amp;)</td>          <td class="paramname"><span class="paramname"><em>yPins</em>[Y]</span>&#160;)</td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>yPins</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>X</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Конструктор </p>
-<dl class="tparams"><dt>Параметры шаблона</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">X</td><td>размер массива <a class="el" href="#a9aaafbf38091c0a66b9e64963989c75f">Y размер массива  _yPins  xPins массив пинов  yPins массив пинов </a></td></tr>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPins</td><td>указатель на массив пинов </td></tr>
+    <tr><td class="paramname">yPins</td><td>указатель на массив пинов </td></tr>
+    <tr><td class="paramname">X</td><td>размер массива xPins </td></tr>
+    <tr><td class="paramname">Y</td><td>размер массива yPins </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00083">83</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8cpp_source.html">ButtonMatrix.cpp</a> строка <a class="el" href="_button_matrix_8cpp_source.html#l00005">5</a></p>
 
 </div>
 </div>
@@ -178,19 +187,19 @@ template&lt;uint8_t X, uint8_t Y&gt; </div>
 
 <p>Деструктор </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00047">47</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8cpp_source.html">ButtonMatrix.cpp</a> строка <a class="el" href="_button_matrix_8cpp_source.html#l00036">36</a></p>
 
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
-<a id="a8ae78a224cf4898949fa70b62c0ddbf5" name="a8ae78a224cf4898949fa70b62c0ddbf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ae78a224cf4898949fa70b62c0ddbf5">&#9670;&#160;</a></span>check()</h2>
+<a id="a1c131f0b9ae1c42a572f067cc7a3a6bc" name="a1c131f0b9ae1c42a572f067cc7a3a6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c131f0b9ae1c42a572f067cc7a3a6bc">&#9670;&#160;</a></span>check()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t ButtonMatrix::check </td>
+          <td class="memname">int16_t ButtonMatrix::check </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -199,9 +208,9 @@ template&lt;uint8_t X, uint8_t Y&gt; </div>
 </div><div class="memdoc">
 
 <p>проверить какая кнопка в марице нажата </p>
-<dl class="section return"><dt>Возвращает</dt><dd>порядковый номер кнопки, -1 если ниодна кнопка не нажата </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>порядковый номер кнопки, -1 если ни одна кнопка не нажата </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00063">63</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8cpp_source.html">ButtonMatrix.cpp</a> строка <a class="el" href="_button_matrix_8cpp_source.html#l00052">52</a></p>
 
 </div>
 </div>
@@ -221,10 +230,9 @@ template&lt;uint8_t X, uint8_t Y&gt; </div>
 </div><div class="memdoc">
 
 <p>Получить размер матрицы по x. </p>
-<dl class="section return"><dt>Возвращает</dt><dd><br  />
- </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>размер массива _xPins </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00058">58</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8cpp_source.html">ButtonMatrix.cpp</a> строка <a class="el" href="_button_matrix_8cpp_source.html#l00047">47</a></p>
 
 </div>
 </div>
@@ -244,22 +252,22 @@ template&lt;uint8_t X, uint8_t Y&gt; </div>
 </div><div class="memdoc">
 
 <p>Получить размер матрицы по y. </p>
-<dl class="section return"><dt>Возвращает</dt><dd><br  />
- </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>размер массива _yPins </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a> строка <a class="el" href="_button_matrix_8hpp_source.html#l00053">53</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_button_matrix_8cpp_source.html">ButtonMatrix.cpp</a> строка <a class="el" href="_button_matrix_8cpp_source.html#l00042">42</a></p>
 
 </div>
 </div>
-<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>C:/Users/yyari/Documents/Arduino/buttonlib/src/<a class="el" href="_button_matrix_8hpp_source.html">ButtonMatrix.hpp</a></li>
+<li>C:/Users/yyari/Documents/Arduino/buttonlib/src/<a class="el" href="_button_matrix_8cpp_source.html">ButtonMatrix.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="class_button_matrix.html">ButtonMatrix</a></li>
+    <li class="navelem"><a class="el" href="namespace_button_lib.html">ButtonLib</a></li><li class="navelem"><a class="el" href="class_button_lib_1_1_button_matrix.html">ButtonMatrix</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -1,0 +1,133 @@
+\doxysection{Класс Button\+Lib\+::Button\+Matrix}
+\hypertarget{class_button_lib_1_1_button_matrix}{}\label{class_button_lib_1_1_button_matrix}\index{ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}}
+
+
+Класс для работы с матрицей кнопок  
+
+
+
+
+{\ttfamily \#include $<$Button\+Matrix.\+hpp$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_lib_1_1_button_matrix_a5705160fbea8e896d192869040dc40a2}{Button\+Matrix}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}x\+Pins, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}y\+Pins, uint8\+\_\+t X, uint8\+\_\+t Y)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_button_lib_1_1_button_matrix_a6ca01e3134c5df5523afe08c010d9337}{\texorpdfstring{$\sim$}{\string~}\+Button\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_button_lib_1_1_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1}{Get\+SizeX}} ()
+\begin{DoxyCompactList}\small\item\em Получить размер матрицы по x. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_button_lib_1_1_button_matrix_accb10271596a79c4bc9ea5579873ac24}{Get\+SizeY}} ()
+\begin{DoxyCompactList}\small\item\em Получить размер матрицы по y. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{class_button_lib_1_1_button_matrix_a1c131f0b9ae1c42a572f067cc7a3a6bc}{check}} ()
+\begin{DoxyCompactList}\small\item\em проверить какая кнопка в марице нажата \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с матрицей кнопок 
+
+См. определение в файле \mbox{\hyperlink{_button_matrix_8hpp_source}{Button\+Matrix.\+hpp}} строка \mbox{\hyperlink{_button_matrix_8hpp_source_l00011}{11}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_button_lib_1_1_button_matrix_a5705160fbea8e896d192869040dc40a2}\label{class_button_lib_1_1_button_matrix_a5705160fbea8e896d192869040dc40a2} 
+\index{ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}!ButtonMatrix@{ButtonMatrix}}
+\index{ButtonMatrix@{ButtonMatrix}!ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}}
+\doxysubsubsection{\texorpdfstring{ButtonMatrix()}{ButtonMatrix()}}
+{\footnotesize\ttfamily Button\+Matrix\+::\+Button\+Matrix (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{x\+Pins,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{y\+Pins,  }\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y }\end{DoxyParamCaption})}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x\+Pins} & указатель на массив пинов \\
+\hline
+{\em y\+Pins} & указатель на массив пинов \\
+\hline
+{\em X} & размер массива x\+Pins \\
+\hline
+{\em Y} & размер массива y\+Pins \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{_button_matrix_8cpp_source}{Button\+Matrix.\+cpp}} строка \mbox{\hyperlink{_button_matrix_8cpp_source_l00005}{5}}
+
+\Hypertarget{class_button_lib_1_1_button_matrix_a6ca01e3134c5df5523afe08c010d9337}\label{class_button_lib_1_1_button_matrix_a6ca01e3134c5df5523afe08c010d9337} 
+\index{ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}!````~ButtonMatrix@{\texorpdfstring{$\sim$}{\string~}ButtonMatrix}}
+\index{````~ButtonMatrix@{\texorpdfstring{$\sim$}{\string~}ButtonMatrix}!ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ButtonMatrix()}{\string~ButtonMatrix()}}
+{\footnotesize\ttfamily Button\+Matrix\+::\texorpdfstring{$\sim$}{\string~}\+Button\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор 
+
+
+
+См. определение в файле \mbox{\hyperlink{_button_matrix_8cpp_source}{Button\+Matrix.\+cpp}} строка \mbox{\hyperlink{_button_matrix_8cpp_source_l00036}{36}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_button_lib_1_1_button_matrix_a1c131f0b9ae1c42a572f067cc7a3a6bc}\label{class_button_lib_1_1_button_matrix_a1c131f0b9ae1c42a572f067cc7a3a6bc} 
+\index{ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}!check@{check}}
+\index{check@{check}!ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int16\+\_\+t Button\+Matrix\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+проверить какая кнопка в марице нажата 
+
+\begin{DoxyReturn}{Возвращает}
+порядковый номер кнопки, -\/1 если ни одна кнопка не нажата 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{_button_matrix_8cpp_source}{Button\+Matrix.\+cpp}} строка \mbox{\hyperlink{_button_matrix_8cpp_source_l00052}{52}}
+
+\Hypertarget{class_button_lib_1_1_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1}\label{class_button_lib_1_1_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1} 
+\index{ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}!GetSizeX@{GetSizeX}}
+\index{GetSizeX@{GetSizeX}!ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}}
+\doxysubsubsection{\texorpdfstring{GetSizeX()}{GetSizeX()}}
+{\footnotesize\ttfamily uint8\+\_\+t Button\+Matrix\+::\+Get\+SizeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Получить размер матрицы по x. 
+
+\begin{DoxyReturn}{Возвращает}
+размер массива \+\_\+x\+Pins 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{_button_matrix_8cpp_source}{Button\+Matrix.\+cpp}} строка \mbox{\hyperlink{_button_matrix_8cpp_source_l00047}{47}}
+
+\Hypertarget{class_button_lib_1_1_button_matrix_accb10271596a79c4bc9ea5579873ac24}\label{class_button_lib_1_1_button_matrix_accb10271596a79c4bc9ea5579873ac24} 
+\index{ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}!GetSizeY@{GetSizeY}}
+\index{GetSizeY@{GetSizeY}!ButtonLib::ButtonMatrix@{ButtonLib::ButtonMatrix}}
+\doxysubsubsection{\texorpdfstring{GetSizeY()}{GetSizeY()}}
+{\footnotesize\ttfamily uint8\+\_\+t Button\+Matrix\+::\+Get\+SizeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Получить размер матрицы по y. 
+
+\begin{DoxyReturn}{Возвращает}
+размер массива \+\_\+y\+Pins 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{_button_matrix_8cpp_source}{Button\+Matrix.\+cpp}} строка \mbox{\hyperlink{_button_matrix_8cpp_source_l00042}{42}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/yyari/\+Documents/\+Arduino/buttonlib/src/\mbox{\hyperlink{_button_matrix_8hpp}{Button\+Matrix.\+hpp}}\item 
+C\+:/\+Users/yyari/\+Documents/\+Arduino/buttonlib/src/\mbox{\hyperlink{_button_matrix_8cpp}{Button\+Matrix.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var _button_matrix_8hpp =
 [
-    [ "ButtonMatrix", "class_button_matrix.html", "class_button_matrix" ]
+    [ "ButtonLib::ButtonMatrix", "class_button_lib_1_1_button_matrix.html", "class_button_lib_1_1_button_matrix" ]
 ];

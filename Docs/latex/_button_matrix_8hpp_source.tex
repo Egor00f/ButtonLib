@@ -7,90 +7,30 @@
 \DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
 \DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00008}\mbox{\hyperlink{class_button_matrix}{00008}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_matrix}{ButtonMatrix}}}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_button_lib}{ButtonLib}}}
 \DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00010}00010\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00012}00012\ \ \ \ \ uint8\_t\ *\_xPins;}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00015}00015\ \ \ \ \ uint8\_t\ *\_yPins;}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00016}00016\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00018}00018\ \ \ \ \ uint8\_t\ \_x,\ \_y;}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00020}00020\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{template}\ <u\textcolor{keywordtype}{int}8\_t\ X,\ u\textcolor{keywordtype}{int}8\_t\ Y>}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{class_button_matrix_acb37502dfd37b7b94dd14361957a12fe}{ButtonMatrix}}(uint8\_t\ (\&xPins)[X],\ uint8\_t\ (\&yPins)[Y]);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_button_matrix_a6ca01e3134c5df5523afe08c010d9337}{\string~ButtonMatrix}}();}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00035}00035\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1}{GetSizeX}}();}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00039}00039\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_button_matrix_accb10271596a79c4bc9ea5579873ac24}{GetSizeY}}();}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00043}00043\ \ \ \ \ int8\_t\ \mbox{\hyperlink{class_button_matrix_a8ae78a224cf4898949fa70b62c0ddbf5}{check}}();}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00044}00044\ \};}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00047}\mbox{\hyperlink{class_button_matrix_a6ca01e3134c5df5523afe08c010d9337}{00047}}\ \mbox{\hyperlink{class_button_matrix_a6ca01e3134c5df5523afe08c010d9337}{ButtonMatrix::\string~ButtonMatrix}}()}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00048}00048\ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00049}00049\ \ \ \ \ free(\_xPins);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00050}00050\ \ \ \ \ free(\_yPins);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00051}00051\ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00053}\mbox{\hyperlink{class_button_matrix_accb10271596a79c4bc9ea5579873ac24}{00053}}\ uint8\_t\ \mbox{\hyperlink{class_button_matrix_accb10271596a79c4bc9ea5579873ac24}{ButtonMatrix::GetSizeY}}()}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00054}00054\ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ \_y;}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00056}00056\ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00057}00057\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00058}\mbox{\hyperlink{class_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1}{00058}}\ uint8\_t\ \mbox{\hyperlink{class_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1}{ButtonMatrix::GetSizeX}}()}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00059}00059\ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \_x;}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00061}00061\ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00063}\mbox{\hyperlink{class_button_matrix_a8ae78a224cf4898949fa70b62c0ddbf5}{00063}}\ int8\_t\ \mbox{\hyperlink{class_button_matrix_a8ae78a224cf4898949fa70b62c0ddbf5}{ButtonMatrix::check}}()}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00064}00064\ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}(uint8\_t\ i\ =\ 0;\ i\ <\ \_x;\ i++)}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00066}00066\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ digitalWrite(\_xPins[i],\ HIGH);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(uint8\_t\ j\ =\ 0;\ j\ <\ \_y;\ j++)}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(digitalRead(\_yPins[j]))}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\_x\ *\ i)\ +\ j;}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ digitalWrite(\_xPins[i],\ LOW);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00076}00076\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Если\ ниодна\ кнопка\ не\ была\ нажата}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00078}00078\ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00080}00080\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00082}00082\ \textcolor{keyword}{template}\ <u\textcolor{keywordtype}{int}8\_t\ X,\ u\textcolor{keywordtype}{int}8\_t\ Y>}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00083}\mbox{\hyperlink{class_button_matrix_acb37502dfd37b7b94dd14361957a12fe}{00083}}\ \mbox{\hyperlink{class_button_matrix_acb37502dfd37b7b94dd14361957a12fe}{ButtonMatrix::ButtonMatrix}}(uint8\_t\ (\&xPins)[X],\ uint8\_t\ (\&yPins)[Y])}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00084}00084\ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00085}00085\ \ \ \ \ \_xPins\ =\ (uint8\_t)malloc(x);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00086}00086\ \ \ \ \ \_yPins\ =\ (uint8\_t)malloc(y);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ X;\ i++)}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00089}00089\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \_xPins[i]\ =\ xPins[i];}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00091}00091\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ Y;\ i++)}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00094}00094\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \_yPins[i]\ =\ yPins[i];}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00096}00096\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00097}00097\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ X;\ i++)}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00099}00099\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ pinMode(\_xPins[i],\ INPUT);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00101}00101\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ Y;\ i++)}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00104}00104\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ pinMode(\_yPins[i],\ OUTPUT);}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00106}00106\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00011}\mbox{\hyperlink{class_button_lib_1_1_button_matrix}{00011}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_lib_1_1_button_matrix}{ButtonMatrix}}}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_lib_1_1_button_matrix_a5705160fbea8e896d192869040dc40a2}{ButtonMatrix}}(\textcolor{keyword}{const}\ uint8\_t\ *xPins,\ \textcolor{keyword}{const}\ uint8\_t\ *yPins,\ uint8\_t\ X,\ uint8\_t\ Y);}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_lib_1_1_button_matrix_a6ca01e3134c5df5523afe08c010d9337}{\string~ButtonMatrix}}();}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_button_lib_1_1_button_matrix_a0acc35d2dcd349b72b21d72f23ba5ce1}{GetSizeX}}();}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_button_lib_1_1_button_matrix_accb10271596a79c4bc9ea5579873ac24}{GetSizeY}}();}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ int16\_t\ \mbox{\hyperlink{class_button_lib_1_1_button_matrix_a1c131f0b9ae1c42a572f067cc7a3a6bc}{check}}();}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ uint8\_t\ *\_xPins;}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ uint8\_t\ *\_yPins;}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ uint8\_t\ \_x,\ \_y;}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00045}00045\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_button_matrix_8hpp_source_l00048}00048\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

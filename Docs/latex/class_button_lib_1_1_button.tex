@@ -2,25 +2,30 @@
 \hypertarget{class_button_lib_1_1_button}{}\label{class_button_lib_1_1_button}\index{ButtonLib::Button@{ButtonLib::Button}}
 
 
+Класс для удобной работы с кнопками  
+
+
+
+
 {\ttfamily \#include $<$button.\+hpp$>$}
 
 \doxysubsubsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_button_lib_1_1_button_a0aa0ce9d7b1ff1514b6a78f0842961cc}{Button}} (uint8\+\_\+t PIN)
-\item 
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_button_lib_1_1_button_a0b89099c346d04e00390bb22de7e3b63}{Set\+Pin}} (uint8\+\_\+t pin)
-\item 
+\begin{DoxyCompactList}\small\item\em Сменить пин кнопки \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{class_button_lib_1_1_button_a768206f4aaccc56867a14c84bc89f824}{Get\+Pin}} ()
 \begin{DoxyCompactList}\small\item\em Получить пин \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567bfa}{click}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Проверить нажата ли кнопка \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
+Класс для удобной работы с кнопками 
 
-
-См. определение в файле \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} строка \mbox{\hyperlink{button_8hpp_source_l00021}{21}}
+См. определение в файле \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} строка \mbox{\hyperlink{button_8hpp_source_l00011}{11}}
 
 
 
@@ -33,7 +38,16 @@ bool \mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567
 
 
 
-См. определение в файле \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} строка \mbox{\hyperlink{button_8hpp_source_l00072}{72}}
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em PIN} & \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{button_8cpp_source}{button.\+cpp}} строка \mbox{\hyperlink{button_8cpp_source_l00003}{3}}
 
 
 
@@ -46,7 +60,16 @@ bool \mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567
 
 
 
-См. определение в файле \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} строка \mbox{\hyperlink{button_8hpp_source_l00062}{62}}
+Проверить нажата ли кнопка 
+
+\begin{DoxyReturn}{Возвращает}
+true если кнопка нажата 
+
+false если кнопка не нажата 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{button_8cpp_source}{button.\+cpp}} строка \mbox{\hyperlink{button_8cpp_source_l00020}{20}}
 
 \Hypertarget{class_button_lib_1_1_button_a768206f4aaccc56867a14c84bc89f824}\label{class_button_lib_1_1_button_a768206f4aaccc56867a14c84bc89f824} 
 \index{ButtonLib::Button@{ButtonLib::Button}!GetPin@{GetPin}}
@@ -58,22 +81,36 @@ bool \mbox{\hyperlink{class_button_lib_1_1_button_aa4032f09a7788b5c0e1ffb6ee1567
 
 Получить пин 
 
+\begin{DoxyReturn}{Возвращает}
+значение \+\_\+pin 
+\end{DoxyReturn}
 
 
-См. определение в файле \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} строка \mbox{\hyperlink{button_8hpp_source_l00057}{57}}
+См. определение в файле \mbox{\hyperlink{button_8cpp_source}{button.\+cpp}} строка \mbox{\hyperlink{button_8cpp_source_l00015}{15}}
 
 \Hypertarget{class_button_lib_1_1_button_a0b89099c346d04e00390bb22de7e3b63}\label{class_button_lib_1_1_button_a0b89099c346d04e00390bb22de7e3b63} 
 \index{ButtonLib::Button@{ButtonLib::Button}!SetPin@{SetPin}}
 \index{SetPin@{SetPin}!ButtonLib::Button@{ButtonLib::Button}}
 \doxysubsubsection{\texorpdfstring{SetPin()}{SetPin()}}
-{\footnotesize\ttfamily void Button\+Lib\+::\+Button\+::\+Set\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Button\+Lib\+::\+Button\+::\+Set\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
 
 
 
-См. определение в файле \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} строка \mbox{\hyperlink{button_8hpp_source_l00040}{40}}
+Сменить пин кнопки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em pin} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{button_8cpp_source}{button.\+cpp}} строка \mbox{\hyperlink{button_8cpp_source_l00009}{9}}
 
 
 
-Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/yyari/\+Documents/\+Arduino/buttonlib/src/\mbox{\hyperlink{button_8hpp}{button.\+hpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/yyari/\+Documents/\+Arduino/buttonlib/src/\mbox{\hyperlink{button_8hpp}{button.\+hpp}}\item 
+C\+:/\+Users/yyari/\+Documents/\+Arduino/buttonlib/src/\mbox{\hyperlink{button_8cpp}{button.\+cpp}}\end{DoxyCompactItemize}
