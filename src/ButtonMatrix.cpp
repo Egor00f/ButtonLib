@@ -2,25 +2,15 @@
 
 using namespace ButtonLib;
 
-ButtonMatrix::ButtonMatrix(const uint8_t * xPins, const uint8_t * yPins, uint8_t X, uint8_t Y)
+ButtonMatrix::ButtonMatrix(const uint8_t *xPins, const uint8_t *yPins, const uint8_t &X, const uint8_t &Y)
+	: _x(X), _y(Y)
 {
     _xPins = (uint8_t*)malloc(X);
     _yPins = (uint8_t*)malloc(Y);
 
-    _x = X;
-    _y = Y;
+	memcpy(_xPins, xPins, X);
 
-    for (uint8_t i = 0; i < X; i++)
-    {
-        _xPins[i] = xPins[i];
-    }
-
-    for (uint8_t i = 0; i < Y; i++)
-    {
-        _yPins[i] = yPins[i];
-    }
-
-
+    memcpy(_yPins, yPins, Y);
 
     for (uint8_t i = 0; i < X; i++)
     {
@@ -39,14 +29,14 @@ ButtonMatrix::~ButtonMatrix()
 	free(_yPins);
 }
 
-uint8_t ButtonMatrix::GetSizeY()
+const uint8_t& ButtonMatrix::GetSizeY()
 {
-	return _y;
+	return &_y;
 }
 
-uint8_t ButtonMatrix::GetSizeX()
+const uint8_t& ButtonMatrix::GetSizeX()
 {
-	return _x;
+	return &_x;
 }
 
 int16_t ButtonMatrix::check()

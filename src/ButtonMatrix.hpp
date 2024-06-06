@@ -16,21 +16,23 @@ namespace ButtonLib
 		/// @param yPins указатель на массив пинов
 		/// @param X размер массива xPins
 		/// @param Y размер массива yPins
-		ButtonMatrix(const uint8_t *xPins, const uint8_t *yPins, uint8_t X, uint8_t Y);
+		ButtonMatrix(const uint8_t *xPins, const uint8_t *yPins, const uint8_t &X, const uint8_t &Y);
 
 		/// @brief Деструктор
 		~ButtonMatrix();
 
 		/// @brief Получить размер матрицы по x
 		/// @return размер массива _xPins
-		uint8_t GetSizeX();
+		const uint8_t& GetSizeX();
 
 		/// @brief Получить размер матрицы по y
 		/// @return размер массива _yPins
-		uint8_t GetSizeY();
+		const uint8_t& GetSizeY();
 
 		/// @brief проверить какая кнопка в марице нажата
-		/// @return порядковый номер кнопки, -1 если ни одна кнопка не нажата
+		/// @details почерёдно проверяет все пины указанные в конструкторе
+		/// @return порядковый номер кнопки(слева направо, построчно вниз)
+		/// @return -1 если ни одна кнопка не нажата
 		int16_t check();
 
 	private:
